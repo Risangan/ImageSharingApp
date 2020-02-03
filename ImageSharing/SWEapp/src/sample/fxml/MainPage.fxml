@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="346.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.MainController">
+    <children>
+        <BorderPane prefHeight="567.0" prefWidth="346.0">
+            <center>
+                <DialogPane BorderPane.alignment="CENTER" />
+            </center>
+            <bottom>
+
+            </bottom>
+            <top>
+                <TableView fx:id="table" onMouseClicked="#clickItem" prefHeight="440.0" prefWidth="346.0" BorderPane.alignment="CENTER">
+                    <columns>
+                        <TableColumn fx:id="postID" prefWidth="75.0" text="Title">
+
+                        </TableColumn>
+
+                        <TableColumn fx:id="PostContent" prefWidth="75.0" text="Content">
+
+                        </TableColumn>
+
+                        <TableColumn fx:id="postVotes" prefWidth="75.0" text="Votes">
+                            <cellValueFactory><PropertyValueFactory property="pv" /></cellValueFactory>
+                        </TableColumn>
+                        
+
+                        <TableColumn fx:id="photoCol" prefWidth="75.0" text="photo">
+                            <cellValueFactory><PropertyValueFactory property="image" /></cellValueFactory>
+                        </TableColumn>
+
+
+                    </columns>
+                </TableView>
+
+            </top>
+        </BorderPane>
+        <ButtonBar prefHeight="40.0" prefWidth="200.0">
+            <buttons>
+            <Button mnemonicParsing="false" text="Close" textAlignment="JUSTIFY" onAction="#closeApp"/>
+            <Button fx:id="addPostButton" mnemonicParsing="false" onAction="#addPostButton" text="Add Post" />
+            </buttons>
+        </ButtonBar>
+    </children>
+</VBox>
